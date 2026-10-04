@@ -1,0 +1,29 @@
+Merge sort plain english using an array vs list or linked lis
+look at the array of integers and divide into left and right
+continue to split until each element is alone in the array
+then compare first (left) to next (right) and sort from lowest to highest (or vise versa)
+continue until one array has been emptied always comparing front left to first (next) right
+return result
+
+example array[ 38, 27, 43, 3, 8, 99 ]
+becomes [ 38, 27, 43, ] [ 3, 8, 99 ]
+becomes [ 38 ] [ 27, 43 ] and [ 3 ] [ 8, 99 ]
+becomes [38] [27] [43] and [3] [8] [99]
+compare first left and first right and take smaller never comparing from same side
+build new array by comparing first left and first right ( 38 nand 27) with smaller as new first left
+[27] now ahead of [ 38, 43 ]
+first right [3] already smaller than first right [8] in that side of the origonal split
+now compare first left [27] with first right [3]
+return [3]
+becomes new array [3] compared to left [27] [38, 43] and right [8, 99]
+new array = [3]
+origonal left array = [27, 38, 43] og right arr=[ 8, 99]
+compare first left to first right ( 27 > 8 )
+return = new.arr[3, 8] with left.arr[27, 38, 43] and right.arr[99]
+compare 27 to 99 and attach the smaller to the back of the new array
+return new.arr[ 3, 8, 27 ] left.arr[ 38, 43 ] and right.arr[ 99 ]
+compare again left to right ( 38 < 99 ) add the 38
+compare again ( 43 < 99 ) add 43 to end
+left side now empty so 99 has no comparison to make and jumps to the end. // this is important find the empty array? cool end loop
+return new.arr[ 3, 8, 27, 38, 43, 99 ]
+done. 
